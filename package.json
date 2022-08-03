@@ -1,0 +1,54 @@
+{
+  "name": "project-mgmt",
+  "version": "1.0.0",
+  "description": "project management tool",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "concurrently \"npm run nodemon\" \"cd ./client && npm start\"",
+    "client" : "cd ./client && npm start",
+    "server" : "npm run nodemon",
+    "install --all" : "npm install && cd ./client && npm install",
+    "start" : "export APP_ENV=production;",
+    "build" : "cd ./client && npm run build",
+    "nodemon": "nodemon -r dotenv/config --exec src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prynsh7/project-mgmt.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongoose",
+    "typescript",
+    "boilerplate"
+  ],
+  "dependencies": {
+    "compression": "^1.7.4",
+    "concurrently": "^7.2.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.1.0",
+    "helmet": "^4.6.0",
+    "http-status": "^1.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.10",
+    "mongoose-private": "^0.1.3",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-anonymous": "^1.0.1",
+    "passport-jwt": "^4.0.0",
+    "winston": "^3.3.3",
+    "xss-clean": "^0.1.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prynsh7/project-mgmt/issues"
+  },
+  "homepage": "https://github.com/prynsh7/project-mgmt#readme"
+}
