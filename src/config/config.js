@@ -17,4 +17,21 @@ export const DB = {
   NAME: process.env.DB_NAME,
   PORT: process.env.DB_PORT || 27017,
 }
-export const DB_URI = process.env.DB_URI || 'mongodb://localhost:27017/test'
+export const DB_URI = process.env.DB_URI || 'mongodb://localhost:27017/pot'
+
+
+
+// db connection
+import mongoose from "mongoose"
+
+const dbConnect=mongoose.connect(DB_URI,{useNewUrlParser:true},function(err){
+  if(!err){
+    console.log("DB Connected Successfully....")
+  }
+  else{
+    console.log(err)
+  }
+})
+
+export default dbConnect
+
